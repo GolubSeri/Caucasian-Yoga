@@ -317,7 +317,7 @@ body._lock {
 .home {
   height: 100vh;
   padding-top: 240px;
-  background: rgba(157, 205, 211, 0.2);
+  background-color: rgba(157, 205, 211, 0.2);
   position: relative;
 }
 
@@ -339,7 +339,6 @@ body._lock {
 }
 
 .home__background.one {
-  background-blend-mode: color-burn;
   width: 868px;
   height: 591px;
   position: absolute;
@@ -610,12 +609,6 @@ body._lock {
   width: 100%;
   max-height: 36px;
   height: 100%;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-.contacts__link img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .contacts-form {
@@ -624,32 +617,159 @@ body._lock {
 
 .contacts-form__name {
   width: 100%;
-  height: 56px;
+  padding: 16px 0px;
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__name:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contacts-form__name:focus::-moz-placeholder {
+  color: transparent;
+}
+.contacts-form__name:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__name:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__name:focus::placeholder {
+  color: transparent;
 }
 
 .contacts-form__email {
   margin-top: 40px;
   width: 100%;
-  height: 56px;
+  padding: 16px 0px;
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__email:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contacts-form__email:focus::-moz-placeholder {
+  color: transparent;
+}
+.contacts-form__email:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__email:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__email:focus::placeholder {
+  color: transparent;
 }
 
 .contacts-form__message {
-  margin-top: 56px;
-  max-width: 522px;
-  min-width: 522px;
-  min-height: 38px;
-  max-height: 50px;
+  margin-top: 40px;
+  resize: none;
+  width: 100%;
+  max-height: 56px;
+  padding-top: 16px;
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #302F2B;
+}
+.contacts-form__message:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contacts-form__message:focus::-moz-placeholder {
+  color: transparent;
+}
+.contacts-form__message:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__message:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.contacts-form__message:focus::placeholder {
+  color: transparent;
 }
 
 .contacts-form__button {
   margin-top: 56px;
   background-color: #302F2B;
   border-radius: 4px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 .contacts-form__button span {
   display: inline-block;
@@ -657,10 +777,6 @@ body._lock {
   font-weight: 600;
   font-size: 14px;
   color: #FFFFFF;
-}
-.contacts-form__button:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 footer .container {

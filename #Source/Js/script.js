@@ -25,7 +25,7 @@ if(iconMenu){
 // Базовое значение padding top и bottom шапки;
 let headerPadDown = 21;
 // До какого размера изменится при скролле; ( нужно в другом скрипте ) 
-let headerPadUp = 10;
+let headerPadUp = 21;
 // Текущее значение padding шапки
 let nowPad = headerPadDown;
 

@@ -70,13 +70,9 @@ body._lock{
 	height: 100vh;
 	padding-top: 240px;
 
-	background: rgba(157, 205, 211, 0.2);
+	background-color: #9DCDD333;
 
 	position: relative;
-}
-.container {
-}
-.home__body {
 }
 .home__title {
 	max-width: 530px;
@@ -100,7 +96,9 @@ body._lock{
 }
 .home__background {
 	&.one{
-		background-blend-mode: color-burn;
+		//mix-blend-mode: color-burn;
+		//background-color: #9DCDD333;
+		//opacity: 80%;
 
 		width: 868px;
 		height: 591px;
@@ -392,11 +390,6 @@ body._lock{
 		width: 100%;
 		max-height: 36px;
 		height: 100%;
-
-		transition: all 0.3s ease 0s;
-		&:hover{
-			transform: scale(1.1);
-		}
 	}
 }
 
@@ -405,30 +398,78 @@ body._lock{
 }
 .contacts-form__name {
 	width: 100%;
-	height: 56px;
+	padding: 16px 0px;
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+
+	&::placeholder{
+		font-weight: 400;
+		font-size: 16px;
+
+		color: #302F2B;
+	}
+
+	&:focus::placeholder{
+		color: transparent;
+	}
+
+	font-weight: 400;
+	font-size: 16px;
+	color: #302F2B;
 }
 .contacts-form__email {
 	margin-top: 40px;
 
 	width: 100%;
-	height: 56px;
+	padding: 16px 0px;
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+
+	&::placeholder{
+		font-weight: 400;
+		font-size: 16px;
+
+		color: #302F2B;
+	}
+
+	&:focus::placeholder{
+		color: transparent;
+	}
+
+	font-weight: 400;
+	font-size: 16px;
+	color: #302F2B;
 }
 .contacts-form__message {
-	margin-top: 56px;
+	margin-top: 40px;
 
-	//resize: none; 
+	resize: none; 
 
-	//width: 100%;
-	max-width: 522px;
-	min-width: 522px;
-	min-height: 38px;
-	max-height: 50px;
+	width: 100%;
+	max-height: 56px;
+	padding-top: 16px;
+
+	// max-width: 522px;
+	// min-width: 522px;
+	// min-height: 38px;
+	// max-height: 50px;
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+
+	&::placeholder{
+		font-weight: 400;
+		font-size: 16px;
+
+		color: #302F2B;
+	}
+
+	&:focus::placeholder{
+		color: transparent;
+	}
+
+	font-weight: 400;
+	font-size: 16px;
+	color: #302F2B;
 }
 .contacts-form__button {
 	margin-top: 56px;
@@ -445,11 +486,6 @@ body._lock{
 		font-size: 14px;
 
 		color: #FFFFFF;
-	}
-
-	transition: all 0.3s ease 0s;
-	&:hover{
-		transform: scale(1.05);
 	}
 }
 
