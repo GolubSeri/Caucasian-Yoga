@@ -1,0 +1,463 @@
+// Миксины
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+
+@mixin adaptiv-value($property, $startSize, $minSize, $maxWidthContainer, $size) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+
+	@media (max-width: #{$maxWidthContainer + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$size + px}) / #{$maxWidthContainer - $size}));
+	}
+}
+
+// Подключаем шрифты
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+// Шрифт по умолчанию
+$fontfamily:"Noto Sans";
+
+// Переменные
+$mw: 1090;
+$minwidth: 320px;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+
+// Обнуление
+@import "nullstyle.scss";
+
+// Оболочка
+.wrapper{
+	width: 100%; min-height: 100%; overflow: hidden; 
+	&.loaded{}
+}
+
+// Заготовки
+.ibg{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ibg img{
+	display: none;
+}
+
+// Основная сетка
+.container{
+	font-family: $fontfamily;
+	
+	max-width: $mw+px; margin: 0 auto; width: 100%;
+	@media (max-width: $md1+px){max-width: 970px;}
+	@media (max-width: $md2+px){max-width: 750px;}
+	@media (max-width: $md3+px){max-width: none; padding: 0 10px;}
+}
+
+//Классы
+
+// Подключаем header
+@import "header.scss";
+
+// Основной блок
+// ================================== 
+
+body._lock{
+	overflow: hidden;
+}
+
+// ==================================
+
+.home {
+	height: 100vh;
+	padding-top: 240px;
+
+	background: rgba(157, 205, 211, 0.2);
+
+	position: relative;
+}
+.container {
+}
+.home__body {
+}
+.home__title {
+	max-width: 530px;
+
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 100px;
+
+	letter-spacing: -2px;
+}
+.home__text {
+	margin-top: 35px;
+
+	max-width: 547px;
+
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 35px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+.home__background {
+	&.one{
+		background-blend-mode: color-burn;
+
+		width: 868px;
+		height: 591px;
+		
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&.two{
+		position: absolute;
+
+		width: 808px;
+		height: 734px;
+
+		right: 98px;
+		bottom: 0;
+	}
+}
+
+// ==================================
+
+.about {}
+.container {}
+.about__body {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.about__row {
+	@include flexbox();
+}
+.about__column-image {
+	width: 100%;
+	img{
+		max-width: 374px;
+		max-height: 455px;
+		height: 100%;
+	}
+}
+.about__column-info {
+	margin-left: 60px;
+}
+.about__name {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 49px;
+
+	letter-spacing: -1px;
+
+	color: #302F2B;
+}
+.about__post {
+	margin-top: 12px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+
+	color: #979077;
+}
+.about__text {
+	margin-top: 24px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+
+// ==================================
+
+// Попробовать Flex для столбцов, 
+
+.courses {
+	position: relative;
+
+	background-color: #F5F1F2;
+}
+.courses__background {
+	position: absolute;
+	bottom: 0;
+
+	z-index: 0;
+	//max-width: 1345px;
+	width: 100%;
+	max-height: 679px;
+	height: 100%;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: color-burn;
+}
+.courses__body {
+	position: relative;
+	z-index: 1;
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.courses__title {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 49px;
+
+	letter-spacing: -1px;
+
+	color: #302F2B;
+}
+.courses__text {
+	margin-top: 24px;
+
+	max-width: 747px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+.courses__row {
+	margin-top: 64px;
+
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.courses__column {
+	max-width: 337px;
+	width: 100%;
+	margin-bottom: 39px;
+
+	&:nth-child(3n + 1){
+		margin-right: 39px;
+	}
+
+	&:nth-child(3n + 2){
+		margin-right: 39px;
+	}
+}
+.courses-item {
+	background: #fff;
+	border-radius: 4px;
+}
+.courses-item__body {
+	margin-left: 36px;
+}
+.courses-item__image {
+	img{
+		display: block;
+
+		border-radius: 4px 4px 0 0;
+
+		width: 100%;
+		max-width: 337px;
+		height: 100%;
+		max-height: 177px;
+
+		// Мб лучше использовать background-image 
+		object-fit: cover;
+	}
+}
+.courses-item__title {
+	margin-top: 30px;
+
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+}
+.courses-item__text {
+	margin-top: 9px;
+
+	max-width: 250px;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+.courses-item__button {
+	text-align: center;
+
+	margin-top: 26px;
+	margin-bottom: 30px;
+
+	display: inline-block;
+
+	border: 1px solid rgba(48, 47, 43, 0.3);
+	border-radius: 4px;
+
+	max-width: 256px;
+	width: 100%;
+	padding: 15px 0px;	
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: rgba(48, 47, 43, 0.8);
+
+	transition: all 0.3s ease 0s;
+	&:hover{
+		background-color: rgba(48, 47, 43, 0.5);
+		color: #fff;
+	}
+}
+
+// ==================================
+
+.contacts {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.contacts__title {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 49px;
+
+	letter-spacing: -1px;
+
+	color: #302F2B;
+}
+.contacts__row {
+	margin-top: 40px;
+
+	@include flexbox();
+}
+.contacts__column-image {
+	width: 100%;
+	img{
+		max-width: 500px;
+		width: 100%;
+		max-height: 603px;
+		height: 100%;
+	}
+}
+.contacts__column-info {
+	margin-left: 68px;
+
+	max-width: 522px;
+	width: 100%;
+}
+.contacts__sub-row {
+	@include flexbox();
+}
+.contacts__sub-column {
+	&:nth-child(2){
+		margin-left: 40px;
+	}
+}
+.contacts__sub-title {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+.contacts__text {
+	margin-top: 8px;
+
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #302F2B;
+}
+
+.contacts__social-title {
+	margin-top: 36px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+
+	color: rgba(48, 47, 43, 0.6);
+}
+.contacts__social-network {
+	margin-top: 16px;
+}
+.contacts__link {
+	margin-right: 23px;
+
+	&:last-child{
+		margin-right: 0;
+	}
+
+	img{
+		max-width: 36px;
+		width: 100%;
+		max-height: 36px;
+		height: 100%;
+
+		transition: all 0.3s ease 0s;
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}
+
+.contacts-form {
+	margin-top: 64px;
+}
+.contacts-form__name {
+	width: 100%;
+	height: 56px;
+
+	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+}
+.contacts-form__email {
+	margin-top: 40px;
+
+	width: 100%;
+	height: 56px;
+
+	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+}
+.contacts-form__message {
+	margin-top: 56px;
+
+	//resize: none; 
+
+	//width: 100%;
+	max-width: 522px;
+	min-width: 522px;
+	min-height: 38px;
+	max-height: 50px;
+
+	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
+}
+.contacts-form__button {
+	margin-top: 56px;
+
+	background-color:  #302F2B;
+	border-radius: 4px;
+
+	span{
+		display: inline-block;
+
+		padding: 14px 40px;
+
+		font-weight: 600;
+		font-size: 14px;
+
+		color: #FFFFFF;
+	}
+
+	transition: all 0.3s ease 0s;
+	&:hover{
+		transform: scale(1.05);
+	}
+}
+
+// ==================================
+
+
+// Подключаем footer
+@import "footer.scss";
+
+// Подключение файлов UI стилей, форм
+@import "forms.scss";
