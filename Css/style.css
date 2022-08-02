@@ -207,8 +207,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.4s ease 0s;
   }
   .menu__list li a:hover:after {
-    width: 43px;
-    margin-left: -21.5px;
+    width: 40px;
+    margin-left: -20px;
   }
 }
 
@@ -661,6 +661,68 @@ body._lock {
 .contacts-form__button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+footer .container {
+  max-width: 1312px;
+}
+
+.footer__body {
+  border-top: 1px solid rgba(48, 47, 43, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 31px;
+  padding-bottom: 32px;
+}
+
+.footer__author {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(48, 47, 43, 0.8);
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+.footer__list li {
+  margin-right: 50px;
+}
+.footer__list li:last-child {
+  margin-right: 0;
+}
+
+.footer__link {
+  font-weight: 500;
+  font-size: 14px;
+  color: #302F2B;
+}
+@media (min-width: 767px) {
+  .footer__link {
+    position: relative;
+  }
+  .footer__link:after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background-color: #22222b;
+    left: 50%;
+    bottom: -8px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .footer__link:hover:after {
+    width: 40px;
+    margin-left: -20px;
+  }
 }
 
 .btn {
