@@ -1,9 +1,13 @@
+// ====== Адаптированные фоновые изображения ====== 
+
 function ibg(){
-	$.each($('.ibg'), function(index, val) {
-		if($(this).find('img').length>0){
-			$(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
-		}
-	});
+	var ibgItems = document.querySelectorAll('.ibg');
+	if (ibgItems.length > 0){
+		ibgItems.forEach(ibgItem => {
+			let imgItem = ibgItem.querySelector('img').getAttribute('src');
+			ibgItem.style.backgroundImage = 'url("' + imgItem + '")';
+		});
+	}
 }
 ibg();
 

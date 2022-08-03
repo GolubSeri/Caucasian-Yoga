@@ -1,5 +1,12 @@
 // Миксины
-@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;
+}
 
 @mixin adaptiv-value($property, $startSize, $minSize, $maxWidthContainer, $size) {
 	$addSize: $startSize - $minSize;
@@ -11,45 +18,56 @@
 }
 
 // Подключаем шрифты
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
 // Шрифт по умолчанию
-$fontfamily:"Noto Sans";
+$fontfamily: "Noto Sans";
 
 // Переменные
 $mw: 1090;
 $minwidth: 320px;
-$md1:$mw+12;
-$md2:992.98;
-$md3:767.98;
-$md4:479.98;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
 
 // Обнуление
 @import "nullstyle.scss";
 
 // Оболочка
-.wrapper{
-	width: 100%; min-height: 100%; overflow: hidden; 
-	&.loaded{}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	//&.loaded{}
 }
 
 // Заготовки
-.ibg{
+.ibg {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.ibg img{
+.ibg img {
 	display: none;
 }
 
 // Основная сетка
-.container{
+.container {
 	font-family: $fontfamily;
-	
-	max-width: $mw+px; margin: 0 auto; width: 100%;
-	@media (max-width: $md1+px){max-width: 970px;}
-	@media (max-width: $md2+px){max-width: 750px;}
-	@media (max-width: $md3+px){max-width: none; padding: 0 10px;}
+
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: ($md1 + px)) {
+		max-width: 970px;
+	}
+	@media (max-width: ($md2 + px)) {
+		max-width: 750px;
+	}
+	@media (max-width: ($md3 + px)) {
+		max-width: none;
+		padding: 0 10px;
+	}
 }
 
 //Классы
@@ -58,9 +76,9 @@ $md4:479.98;
 @import "header.scss";
 
 // Основной блок
-// ================================== 
+// ==================================
 
-body._lock{
+body._lock {
 	overflow: hidden;
 }
 
@@ -70,7 +88,7 @@ body._lock{
 	height: 100vh;
 	padding-top: 240px;
 
-	background-color: #9DCDD333;
+	background-color: #9dcdd333;
 
 	position: relative;
 }
@@ -95,20 +113,20 @@ body._lock{
 	color: rgba(48, 47, 43, 0.6);
 }
 .home__background {
-	&.one{
+	&.one {
 		//mix-blend-mode: color-burn;
 		//background-color: #9DCDD333;
 		//opacity: 80%;
 
 		width: 868px;
 		height: 591px;
-		
+
 		position: absolute;
 		bottom: 0;
 		right: 0;
 	}
 
-	&.two{
+	&.two {
 		position: absolute;
 
 		width: 808px;
@@ -121,8 +139,6 @@ body._lock{
 
 // ==================================
 
-.about {}
-.container {}
 .about__body {
 	padding-top: 150px;
 	padding-bottom: 150px;
@@ -132,7 +148,7 @@ body._lock{
 }
 .about__column-image {
 	width: 100%;
-	img{
+	img {
 		max-width: 374px;
 		max-height: 455px;
 		height: 100%;
@@ -148,7 +164,7 @@ body._lock{
 
 	letter-spacing: -1px;
 
-	color: #302F2B;
+	color: #302f2b;
 }
 .about__post {
 	margin-top: 12px;
@@ -171,12 +187,10 @@ body._lock{
 
 // ==================================
 
-// Попробовать Flex для столбцов, 
-
 .courses {
 	position: relative;
 
-	background-color: #F5F1F2;
+	background-color: #f5f1f2;
 }
 .courses__background {
 	position: absolute;
@@ -206,7 +220,7 @@ body._lock{
 
 	letter-spacing: -1px;
 
-	color: #302F2B;
+	color: #302f2b;
 }
 .courses__text {
 	margin-top: 24px;
@@ -230,11 +244,11 @@ body._lock{
 	width: 100%;
 	margin-bottom: 39px;
 
-	&:nth-child(3n + 1){
+	&:nth-child(3n + 1) {
 		margin-right: 39px;
 	}
 
-	&:nth-child(3n + 2){
+	&:nth-child(3n + 2) {
 		margin-right: 39px;
 	}
 }
@@ -246,7 +260,7 @@ body._lock{
 	margin-left: 36px;
 }
 .courses-item__image {
-	img{
+	img {
 		display: block;
 
 		border-radius: 4px 4px 0 0;
@@ -256,7 +270,7 @@ body._lock{
 		height: 100%;
 		max-height: 177px;
 
-		// Мб лучше использовать background-image 
+		// Мб лучше использовать background-image
 		object-fit: cover;
 	}
 }
@@ -291,7 +305,7 @@ body._lock{
 
 	max-width: 256px;
 	width: 100%;
-	padding: 15px 0px;	
+	padding: 15px 0px;
 
 	font-weight: 700;
 	font-size: 14px;
@@ -300,7 +314,7 @@ body._lock{
 	color: rgba(48, 47, 43, 0.8);
 
 	transition: all 0.3s ease 0s;
-	&:hover{
+	&:hover {
 		background-color: rgba(48, 47, 43, 0.5);
 		color: #fff;
 	}
@@ -319,7 +333,7 @@ body._lock{
 
 	letter-spacing: -1px;
 
-	color: #302F2B;
+	color: #302f2b;
 }
 .contacts__row {
 	margin-top: 40px;
@@ -328,7 +342,7 @@ body._lock{
 }
 .contacts__column-image {
 	width: 100%;
-	img{
+	img {
 		max-width: 500px;
 		width: 100%;
 		max-height: 603px;
@@ -345,7 +359,7 @@ body._lock{
 	@include flexbox();
 }
 .contacts__sub-column {
-	&:nth-child(2){
+	&:nth-child(2) {
 		margin-left: 40px;
 	}
 }
@@ -363,7 +377,7 @@ body._lock{
 	font-size: 24px;
 	line-height: 33px;
 
-	color: #302F2B;
+	color: #302f2b;
 }
 
 .contacts__social-title {
@@ -381,11 +395,11 @@ body._lock{
 .contacts__link {
 	margin-right: 23px;
 
-	&:last-child{
+	&:last-child {
 		margin-right: 0;
 	}
 
-	img{
+	img {
 		max-width: 36px;
 		width: 100%;
 		max-height: 36px;
@@ -402,20 +416,20 @@ body._lock{
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
 
-	&::placeholder{
+	&::placeholder {
 		font-weight: 400;
 		font-size: 16px;
 
-		color: #302F2B;
+		color: #302f2b;
 	}
 
-	&:focus::placeholder{
+	&:focus::placeholder {
 		color: transparent;
 	}
 
 	font-weight: 400;
 	font-size: 16px;
-	color: #302F2B;
+	color: #302f2b;
 }
 .contacts-form__email {
 	margin-top: 40px;
@@ -425,25 +439,25 @@ body._lock{
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
 
-	&::placeholder{
+	&::placeholder {
 		font-weight: 400;
 		font-size: 16px;
 
-		color: #302F2B;
+		color: #302f2b;
 	}
 
-	&:focus::placeholder{
+	&:focus::placeholder {
 		color: transparent;
 	}
 
 	font-weight: 400;
 	font-size: 16px;
-	color: #302F2B;
+	color: #302f2b;
 }
 .contacts-form__message {
 	margin-top: 40px;
 
-	resize: none; 
+	resize: none;
 
 	width: 100%;
 	max-height: 56px;
@@ -456,28 +470,28 @@ body._lock{
 
 	border-bottom: 1px solid rgba(48, 47, 43, 0.5);
 
-	&::placeholder{
+	&::placeholder {
 		font-weight: 400;
 		font-size: 16px;
 
-		color: #302F2B;
+		color: #302f2b;
 	}
 
-	&:focus::placeholder{
+	&:focus::placeholder {
 		color: transparent;
 	}
 
 	font-weight: 400;
 	font-size: 16px;
-	color: #302F2B;
+	color: #302f2b;
 }
 .contacts-form__button {
 	margin-top: 56px;
 
-	background-color:  #302F2B;
+	background-color: #302f2b;
 	border-radius: 4px;
 
-	span{
+	span {
 		display: inline-block;
 
 		padding: 14px 40px;
@@ -485,12 +499,11 @@ body._lock{
 		font-weight: 600;
 		font-size: 14px;
 
-		color: #FFFFFF;
+		color: #ffffff;
 	}
 }
 
 // ==================================
-
 
 // Подключаем footer
 @import "footer.scss";

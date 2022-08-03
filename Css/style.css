@@ -77,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100%;
   overflow: hidden;
 }
+
 .ibg {
   background-position: center;
   background-repeat: no-repeat;
@@ -383,7 +384,7 @@ body._lock {
   font-size: 36px;
   line-height: 49px;
   letter-spacing: -1px;
-  color: #302F2B;
+  color: #302f2b;
 }
 
 .about__post {
@@ -404,7 +405,7 @@ body._lock {
 
 .courses {
   position: relative;
-  background-color: #F5F1F2;
+  background-color: #f5f1f2;
 }
 
 .courses__background {
@@ -431,7 +432,7 @@ body._lock {
   font-size: 36px;
   line-height: 49px;
   letter-spacing: -1px;
-  color: #302F2B;
+  color: #302f2b;
 }
 
 .courses__text {
@@ -533,7 +534,7 @@ body._lock {
   font-size: 36px;
   line-height: 49px;
   letter-spacing: -1px;
-  color: #302F2B;
+  color: #302f2b;
 }
 
 .contacts__row {
@@ -583,7 +584,7 @@ body._lock {
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #302F2B;
+  color: #302f2b;
 }
 
 .contacts__social-title {
@@ -621,32 +622,32 @@ body._lock {
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name::placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__name:focus::-webkit-input-placeholder {
   color: transparent;
@@ -671,32 +672,32 @@ body._lock {
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email::placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__email:focus::-webkit-input-placeholder {
   color: transparent;
@@ -723,32 +724,32 @@ body._lock {
   border-bottom: 1px solid rgba(48, 47, 43, 0.5);
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message::placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: #302F2B;
+  color: #302f2b;
 }
 .contacts-form__message:focus::-webkit-input-placeholder {
   color: transparent;
@@ -768,7 +769,7 @@ body._lock {
 
 .contacts-form__button {
   margin-top: 56px;
-  background-color: #302F2B;
+  background-color: #302f2b;
   border-radius: 4px;
 }
 .contacts-form__button span {
@@ -776,7 +777,7 @@ body._lock {
   padding: 14px 40px;
   font-weight: 600;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer .container {
